@@ -62,8 +62,8 @@ const Shop = () => {
     }
 
     return (
-        <div className='shop-container'>
-            <div className="products-container">
+        <div className='grid grid-cols-3'>
+            <div className=" grid col-span-2 md:grid-cols-2 lg:grid-cols-3 mx-auto w-[90]">
                 {
                     products.map(product => <Product
                         key={product.id}
@@ -72,7 +72,7 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div className="cart-container">
+            <div className=" ">
                 <Cart
                     cart={cart}
                     handleClearCart={handleClearCart}
